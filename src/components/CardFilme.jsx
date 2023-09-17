@@ -27,6 +27,8 @@ export default function CardFilme({filme}){
             body: JSON.stringify({media_type: 'movie', media_id: filme.id, watchlist: true})
           };
           
+          //fetch('https://holidays.abstractapi.com/v1/?api_key=b0b39b61cae04c89823f6c8565402678&country=US&year=2020&month=12&day=25, options)
+
           fetch('https://api.themoviedb.org/3/account/9269654/watchlist', options)
             .then(response => response.json())
             .then(response => console.log(response))
